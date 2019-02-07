@@ -7,6 +7,7 @@ set showcmd
 imap kj <Esc>
 set whichwrap=b,h,l,<,>,[,]
 set tabstop=2 shiftwidth=2 expandtab autoindent
+set number
 retab
 
 " Remap switch to another split
@@ -36,10 +37,14 @@ autocmd BufWritePre *.rb,*.rake,*.erb,*.js,*.coffee :%s/\s\+$//e
 
 " Map toggle fold to Enter
 nmap <Enter> za
-
-" Color settings
 highlight Folded ctermbg=none ctermfg=darkcyan
 
 " Config for StatusLineHightlight plugin
 highlight StatusLineModified term=bold,reverse cterm=bold,reverse ctermfg=LightGreen gui=bold,reverse guifg=LightGreen
 highlight StatusLineModifiedNC term=reverse cterm=reverse ctermfg=LightGreen gui=reverse guifg=LightGreen
+
+" CursorLine
+set cursorline
+highlight clear CursorLine
+highlight CursorLineNR cterm=bold ctermfg=Yellow
+highlight LineNr cterm=NONE ctermfg=DarkGray
