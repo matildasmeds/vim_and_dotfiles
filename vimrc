@@ -40,3 +40,6 @@ nmap <Enter> za
 " Color settings
 highlight Folded ctermbg=none ctermfg=darkcyan
 
+" Config for StatusLineHightlight plugin
+highlight StatusLineModified term=bold,reverse cterm=bold,reverse ctermfg=LightGreen gui=bold,reverse guifg=LightGreen
+highlight StatusLineModifiedNC term=reverse cterm=reverse ctermfg=LightGreen gui=reverse guifg=LightGreen

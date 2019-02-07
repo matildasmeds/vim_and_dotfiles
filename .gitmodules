@@ -13,3 +13,6 @@
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible
+[submodule "bundle/vim-StatusLineHighlight"]
+	path = bundle/vim-StatusLineHighlight
+	url = https://github.com/inkarkat/vim-StatusLineHighlight
