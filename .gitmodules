@@ -16,3 +16,9 @@
 [submodule "bundle/vim-StatusLineHighlight"]
 	path = bundle/vim-StatusLineHighlight
 	url = https://github.com/inkarkat/vim-StatusLineHighlight
+[submodule "https:/github.com/ngmy/vim-rubocop.git"]
+	path = https:/github.com/ngmy/vim-rubocop.git
+	url = ./bundle/vim-rubocop
+[submodule "bundle/vim-rubocop"]
+	path = bundle/vim-rubocop
+	url = https://github.com/ngmy/vim-rubocop.git
