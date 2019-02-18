@@ -48,3 +48,12 @@ set cursorline
 highlight clear CursorLine
 highlight CursorLineNR cterm=bold ctermfg=Yellow
 highlight LineNr cterm=NONE ctermfg=DarkGray
+
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! Diff call s:DiffWithSaved()
