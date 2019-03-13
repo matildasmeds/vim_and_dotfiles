@@ -33,7 +33,7 @@ filetype plugin indent on
 call pathogen#helptags()
 
 " Remove trailing white space
-autocmd BufWritePre *.rb,*.rake,*.erb,*.js,*.coffee :%s/\s\+$//e
+autocmd BufWritePre *.rb,*.rake,*.erb,*.js,*.coffee,*.txt,*.TXT,*.yaml,*.md,*.MD,*.dust :%s/\s\+$//e
 
 " Map toggle fold to Enter
 nmap <Enter> za
