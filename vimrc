@@ -39,6 +39,9 @@ autocmd BufWritePre *.rb,*.rake,*.erb,*.js,*.coffee,*.txt,*.TXT,*.yaml,*.md,*.MD
 nmap <Enter> za
 highlight Folded ctermbg=none ctermfg=darkcyan
 
+" Fold CoffeeScript
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+
 " Config for StatusLineHightlight plugin
 highlight StatusLineModified term=bold,reverse cterm=bold,reverse ctermfg=LightGreen gui=bold,reverse guifg=LightGreen
 highlight StatusLineModifiedNC term=reverse cterm=reverse ctermfg=LightGreen gui=reverse guifg=LightGreen
