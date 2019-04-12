@@ -1,5 +1,5 @@
 # vim_setup
-Current personal vim-config &amp; submodules
+My  current vim-config &amp; submodules
 
 ```bash
   #!/bin/bash
