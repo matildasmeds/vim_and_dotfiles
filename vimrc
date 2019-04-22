@@ -1,6 +1,12 @@
 " Enable sensible.vim
 runtime macros/matchit.vim
 
+" Activate pathogen package manager
+call pathogen#infect()
+syntax enable
+filetype plugin indent on
+call pathogen#helptags()
+
 set history=5000
 set showcmd
 
@@ -8,6 +14,7 @@ imap kj <Esc>
 set whichwrap=b,h,l,<,>,[,]
 set tabstop=2 shiftwidth=2 expandtab autoindent
 set number
+set hidden
 retab
 
 " Remap switch to another split
@@ -26,14 +33,16 @@ nmap rk :resize -5<CR>
 nmap rh :vertical resize -5<CR>
 nmap rl :vertical resize +5<CR>
 
-" Activate pathogen package manager
-call pathogen#infect()
-syntax enable
-filetype plugin indent on
-call pathogen#helptags()
+" Setup NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " Remove trailing white space
 autocmd BufWritePre *.rb,*.rake,*.erb,*.js,*.coffee,*.txt,*.TXT,*.yaml,*.md,*.MD,*.dust :%s/\s\+$//e
+
+" Buffers
+nnoremap <silent> <C-Up> :BufExplorer<CR>
+nnoremap <silent> <C-Right> :bn<CR>
+nnoremap <silent> <C-Left> :bp<CR>
 
 " Map toggle fold to Enter
 nmap <Enter> za

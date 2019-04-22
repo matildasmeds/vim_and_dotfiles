@@ -1,6 +1,10 @@
 # vim_setup
 My  current vim-config &amp; submodules
 
+    install vim
+    run the script below
+    add new submodule: git submodule add <git-repo-for-plugin> ./bundle/<plugin-name>
+
 ```bash
   #!/bin/bash
   cd ~
