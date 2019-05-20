@@ -9,6 +9,10 @@ call pathogen#helptags()
 
 set history=5000
 set showcmd
+set autoread
+
+set wildmenu
+set wildmode=longest:list,full
 
 imap kj <Esc>
 set whichwrap=b,h,l,<,>,[,]
