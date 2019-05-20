@@ -14,6 +14,8 @@ set autoread
 set wildmenu
 set wildmode=longest:list,full
 
+set bg=dark
+
 imap kj <Esc>
 set whichwrap=b,h,l,<,>,[,]
 set tabstop=2 shiftwidth=2 expandtab autoindent
