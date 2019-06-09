@@ -43,7 +43,7 @@ nmap rl :vertical resize +5<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 " Remove trailing white space
-autocmd BufWritePre *.rb,*.rake,*.erb,*.js,*.coffee,*.txt,*.TXT,*.yaml,*.md,*.MD,*.dust :%s/\s\+$//e
+autocmd BufWritePre *.rb,*.rake,*.erb,*.js,*.coffee,*.txt,*.TXT,*.yaml,*.md,*.MD,*.dust,*.yml,*.gemspec :%s/\s\+$//e
 
 " Buffers
 nnoremap <silent> <C-Up> :BufExplorer<CR>
