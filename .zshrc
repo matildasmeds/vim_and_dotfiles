@@ -38,6 +38,10 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.rvm/scripts/rvm
 type rvm | head -n 1
 
+# Set editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Key bindings
 function zle-line-init {
     marking=0
