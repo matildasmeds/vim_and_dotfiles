@@ -28,27 +28,22 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-" Remap swap split position
-nmap <S-h> <C-w>H
-nmap <S-j> <C-w>J
-nmap <S-k> <C-w>K
-nmap <S-l> <C-w>L
 " Remap split resize
 nmap rj :resize +5<CR>
 nmap rk :resize -5<CR>
 nmap rh :vertical resize -5<CR>
 nmap rl :vertical resize +5<CR>
 
+" Buffers
+nnoremap <silent> <S-j> :BufExplorer<CR>
+nnoremap <silent> <S-l> :bn<CR>
+nnoremap <silent> <S-h> :bp<CR>
+
 " Setup NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
 " Remove trailing white space
 autocmd BufWritePre *.rb,*.rake,*.erb,*.js,*.coffee,*.txt,*.TXT,*.yaml,*.md,*.MD,*.dust,*.yml,*.gemspec :%s/\s\+$//e
-
-" Buffers
-nnoremap <silent> <C-Up> :BufExplorer<CR>
-nnoremap <silent> <C-Right> :bn<CR>
-nnoremap <silent> <C-Left> :bp<CR>
 
 " Map toggle fold to Enter
 nmap <Enter> za
@@ -75,3 +70,6 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! Diff call s:DiffWithSaved()
+
+" Write all buffers before navigating from Vim to tmux pane
+let g:tmux_navigator_save_on_switch = 2
