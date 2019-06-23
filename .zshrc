@@ -33,14 +33,11 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 export PATH=$HOME/bin/:$PATH
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-source ~/.rvm/scripts/rvm
-type rvm | head -n 1
 
 # Set editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export GIT_EDITOR="$VISUAL"
 
 # Key bindings
 function zle-line-init {
@@ -109,9 +106,6 @@ alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
-
-source /opt/aava/etc/aava.profile
-aava-chome /opt/aava
 
 # Git prompt
 setopt prompt_subst
