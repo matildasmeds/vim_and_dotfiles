@@ -1,4 +1,3 @@
-# vim_setup
 My  current vim-config &amp; submodules.
 
 Decided to include tmux setup in this repo, as it is closely linked to vim setup.
