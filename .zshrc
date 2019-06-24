@@ -1,7 +1,7 @@
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
-prompt adam1
+PROMPT="%B%F{cyan}%(4~|...|)%3~%F{white} %# %b%f%k"
 
 setopt histignorealldups sharehistory
 
@@ -33,6 +33,9 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 export PATH=$HOME/bin/:$PATH
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source /etc/profile.d/rvm.sh
+type rvm | head -n 1
 
 # Set editor
 export VISUAL=vim
@@ -126,3 +129,6 @@ vcs_info_wrapper() {
 RPROMPT=$'$(vcs_info_wrapper)'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+tmux
+clear
