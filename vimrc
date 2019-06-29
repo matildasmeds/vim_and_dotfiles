@@ -35,7 +35,7 @@ nmap rh :vertical resize -5<CR>
 nmap rl :vertical resize +5<CR>
 
 " Buffers
-nnoremap <silent> <S-j> :BufExplorer<CR>
+nnoremap <silent> <S-k> :BufExplorer<CR>
 nnoremap <silent> <S-l> :bn<CR>
 nnoremap <silent> <S-h> :bp<CR>
 
