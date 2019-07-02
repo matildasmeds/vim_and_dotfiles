@@ -104,6 +104,7 @@ bindkey ';2C' select-char-right  # assuming xterm
 bindkey ';5D' backward-word
 bindkey ';5C' forward-word
 bindkey '^[[3~' delete-char
+bindkey -e
 
 alias ..='cd ..'
 alias ...='cd ../../'
@@ -127,6 +128,10 @@ vcs_info_wrapper() {
   fi
 }
 RPROMPT=$'$(vcs_info_wrapper)'
+
+function gitvim {
+  vim -p $(git status --short | awk ' { print $2 } ')
+}
 
 source ~/.localrc # to enable local configs
 
