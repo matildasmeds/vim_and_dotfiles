@@ -99,12 +99,14 @@ function delete-char {
 }
 zle -N delete-char
 
-bindkey ';2D' select-char-left   # assuming xterm
-bindkey ';2C' select-char-right  # assuming xterm
-bindkey ';5D' backward-word
-bindkey ';5C' forward-word
+bindkey -e # emacs binding should probably be before others
+bindkey ';2D' select-char-left   # assuming xterm, Shift-Left
+bindkey ';2C' select-char-right  # assuming xterm, Shift-Right
+bindkey ';5D' backward-word # Ctrl-Left
+bindkey ';5C' forward-word # Ctrl-Right
 bindkey '^[[3~' delete-char
-bindkey -e
+# ;6C Shift-Ctrl-Right
+# ;6D Shift-Ctrl-Left
 
 alias ..='cd ..'
 alias ...='cd ../../'
@@ -127,6 +129,7 @@ vcs_info_wrapper() {
     echo "%{$fg[grey]%}${vcs_info_msg_0_}%{$reset_color%}$del"
   fi
 }
+
 RPROMPT=$'$(vcs_info_wrapper)'
 
 function gitvim {
