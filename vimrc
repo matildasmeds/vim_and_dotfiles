@@ -23,6 +23,27 @@ set number
 set hidden
 retab
 
+" Fix Ctrl/Shift - arrow keys
+map <ESC>[1;5C <C-Right>
+map! <ESC>[1;5C <C-Right>
+map <ESC>[1;6C <C-S-Right>
+map! <ESC>[1;6C <C-S-Right>
+map <ESC>[1;2C <S-Right>
+map! <ESC>[1;2C <S-Right>
+
+map <ESC>[1;5D <C-Left>
+map! <ESC>[1;5D <C-Left>
+map <ESC>[1;6D <C-S-Left>
+map! <ESC>[1;6D <C-S-Left>
+map <ESC>[1;2D <S-Left>
+map! <ESC>[1;2D <S-Left>
+
+map [1;5A <C-Up>
+map [1;5B <C-Down>
+map! [1;5A <C-Up>
+map! [1;5B <C-Down>
+
+
 " Remap switch to another split
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
