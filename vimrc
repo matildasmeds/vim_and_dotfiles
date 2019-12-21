@@ -64,7 +64,7 @@ nnoremap <silent> <S-h> :bp<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 " Remove trailing white space
-autocmd BufWritePre *.rb,*.rake,*.erb,*.js,*.coffee,*.txt,*.TXT,*.yaml,*.md,*.MD,*.dust,*.yml,*.gemspec :%s/\s\+$//e
+autocmd BufWritePre *.rs,*.rb,*.rake,*.erb,*.js,*.coffee,*.txt,*.TXT,*.yaml,*.md,*.MD,*.dust,*.yml,*.gemspec :%s/\s\+$//e
 
 " Map toggle fold to Enter
 nmap <Enter> za
